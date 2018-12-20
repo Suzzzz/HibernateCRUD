@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 10, 2017 7:08:11 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Models.Task" table="TASK" schema="APP" optimistic-lock="version">
+        <id name="taskid" type="int">
+            <column name="TASKID" />
+            <generator class="assigned" />
+        </id>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" length="500" not-null="true" />
+        </property>
+        <property name="employee" type="integer">
+            <column name="EMPLOYEE" not-null="false" />
+        </property>
+    </class>
+</hibernate-mapping>
